@@ -49,8 +49,7 @@ class screenshot():
             open('./result/res.txt', 'a+').write('\n{index},{value}'.format(index=index,value=value))  # 保存info
 
 if __name__ == "__main__":
-    path_chromedriver = './chromedriver.exe'  # 驱动路径
-    path_data = './url.txt'  # url路径
-
+    path_chromedriver = r'C:\Users\qjq\Documents\GitHub\screenshot\chromedriver.exe'  # 驱动路径
+    path_data = r'C:\Users\qjq\Documents\GitHub\screenshot\url.txt'  # url路径
     os.environ['webdriver.chrome.driver'] = path_chromedriver # 加载驱动
     screenshot(path_chromedriver=path_chromedriver, path_data=path_data, timeout=100)  # 批量化截图并保存信息
